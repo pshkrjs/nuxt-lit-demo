@@ -1,5 +1,5 @@
 <template>
-  <lit-component :name="name" :age="age"></lit-component>
+  <lit-component :name="name" :age="age" />
 </template>
 
 <script>
@@ -21,10 +21,8 @@ export default {
     ).then((response) => {
       setTimeout(() => {
         this.age = response.data.age
-        console.log(response.data)
       }, 2000)
     }).catch((e) => {
-      console.log(e)
     })
   }
 }
